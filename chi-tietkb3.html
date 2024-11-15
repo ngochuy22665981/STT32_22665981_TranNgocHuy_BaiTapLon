@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>SAFEZONE</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/trangchu.css">
+   <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+   <script src="./Bootstrap/js/jquery-3.7.1.min.js"></script>
+   <script src="./Bootstrap/js/bootstrap.min.js"></script>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <style>
+      .row1 h2 {
+         display: flex;
+         justify-content: center;
+         /* Căn giữa theo chiều ngang */
+         align-items: center;
+         color: red;
+         transition: color 0.3s ease, text-decoration 0.3s ease;
+      }
+
+      .row h2:hover {
+         color: antiquewhite;
+         /* Change to any color you prefer */
+
+      }
+
+      .col-md-4 h4 {
+         transition: color 0.3s ease, text-decoration 0.3s ease;
+      }
+
+      .col-md-4 h4:hover {
+         color: aqua;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <!-- MENU -->
+      <section class="header">
+         <div class="top-header">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-md-3">
+                     <div class="logo">
+                        <img src="images/logowb.jpg" />
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="search">
+                        <form class="form-inline justify-content-center row">
+                           <div class="form-search col-10">
+                              <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-search p-o" type="submit">
+                                 <i class="fa fa-search" aria-hidden="true"></i>
+                              </button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="contact">
+                        <h4>
+                           Hotline hỗ trợ
+                        </h4>
+                        <h5>
+                           0866149244
+                        </h5>
+                     </div>
+                  </div>
+                  <div class="col-md-2">
+                     <button type="button" class="btn-cart">
+                        <i class="fa fa-cart-plus mr-2" aria-hidden="true"></i>
+                        <a href="dat_hang.html" class="text-white p-1"> Giỏ Hàng</a>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </header>
+   <div class="background-menu"> </div>
+   <div class="menu-wrapper">
+      <div class="container">
+         <nav class="navbar navbar-expand-lg ">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+               <ul class="navbar-nav">
+                  <li class="nav-item ">
+                     <a class="nav-link active" href="trangchu.html">Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                     <div class="dropdown">
+                        <a class="nav-link " data-bs-toggle="dropdown">
+                           SẢN PHẨM <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item " href="./camera.html">CAMERA</a></li>
+                           <li><a class="dropdown-item" href="./khoa.html">KHÓA VÂN TAY</a></li>
+
+                        </ul>
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <div class="dropdown">
+                        <a class="nav-link " data-bs-toggle="dropdown">
+                           Tin tức <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item " href="./tintuc.html">BLOG</a></li>
+                           <li><a class="dropdown-item" href="./dichvu.html">DỊCH VỤ LẮP RÁP</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="khuyenmai.html">
+                        Khuyến mãi
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="gioithieu.html">
+                        Giới thiệu
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="lienhe.html">
+                        Liên hệ
+                     </a>
+                  </li>
+
+               </ul>
+
+            </div>
+            <!-- Nút Đăng xuất -->
+            <button type="button" class="btn btn-outline-warning d-none" id="logout">
+               Đăng xuất <i class="fa fa-sign-out-alt"></i>
+            </button>
+
+            <!-- Nút Đăng nhập / Đăng ký -->
+            <div class="gr-button login-signup">
+               <!-- Nút Đăng nhập -->
+               <button class="btn btn-login" id="dangnhap" data-bs-toggle="modal" data-bs-target="#sign-in">
+                  Đăng nhập <i class="fa fa-sign-in"></i>
+               </button>
+
+               <!-- Modal Đăng nhập -->
+               <div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                           <h2 class="modal-title w-100 text-center fw-bold text-warning">Đăng Nhập</h2>
+                        </div>
+                        <form id="login">
+                           <div class="modal-body p-5">
+                              <div class="input-group mb-4">
+                                 <div class="input-group-text"><i class="fa fa-user text-warning"></i></div>
+                                 <input type="text" class="form-control p-2" id="nameLogin" placeholder="Tên đăng nhập"
+                                    required>
+                              </div>
+                              <div class="input-group mb-3">
+                                 <div class="input-group-text"><i class="fa fa-lock text-warning"></i></div>
+                                 <input type="password" class="form-control p-2" id="passwordLogin"
+                                    placeholder="Mật khẩu" required>
+                              </div>
+                              <p class="text-danger" id="error-signin"></p>
+                              <div class="form-check mb-5">
+                                 <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                                 <label class="form-check-label text-white" for="rememberMe">Ghi nhớ mật khẩu</label>
+                              </div>
+                              <button type="button" class="btn btn-outline-warning w-100" onclick="handleLogin()">
+                                 <h5 class="fw-bold">ĐĂNG NHẬP</h5>
+                              </button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Nút Đăng ký -->
+               <button class="btn btn-login" id="dangky" data-bs-toggle="modal" data-bs-target="#sign-up"
+                  onclick="handleSignup()">
+                  Đăng ký <i class="fa fa-user"></i>
+               </button>
+
+               <!-- Modal Đăng ký -->
+               <div class="modal fade" id="sign-up" tabindex="-1" aria-labelledby="signUpLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                           <h2 class="modal-title w-100 text-center fw-bold text-warning">Đăng Ký</h2>
+                        </div>
+                        <form id="form-dangki">
+                           <div class="modal-body p-5">
+                              <div class="input-group mb-4">
+                                 <div class="input-group-text"><i class="fa fa-user text-warning"></i></div>
+                                 <input type="text" class="form-control p-2" id="name" placeholder="Tên đăng nhập"
+                                    required>
+                              </div>
+                              <div class="input-group mb-4">
+                                 <div class="input-group-text"><i class="fa fa-envelope text-warning"></i></div>
+                                 <input type="email" class="form-control p-2" id="email" placeholder="Email" required>
+                              </div>
+                              <div class="input-group mb-4">
+                                 <div class="input-group-text"><i class="fa fa-phone text-warning"></i></div>
+                                 <input type="tel" class="form-control p-2" id="phone" placeholder="Số điện thoại"
+                                    required>
+                              </div>
+                              <div class="input-group mb-4">
+                                 <div class="input-group-text"><i class="fa fa-lock text-warning"></i></div>
+                                 <input type="password" class="form-control p-2" id="password" placeholder="Mật khẩu"
+                                    required>
+                              </div>
+                              <p class="text-danger" id="error-signup"></p>
+                              <div class="form-check mb-5">
+                                 <input class="form-check-input" type="checkbox" id="check-signup" required>
+                                 <label class="form-check-label text-white" for="check-signup">
+                                    Đồng ý với <a class="link-warning" style="font-size: 18px;" href="#">điều khoản &
+                                       chính sách</a> của chúng tôi
+                                 </label>
+                              </div>
+                              <button type="button" class="btn btn-outline-warning w-100" id="btn-dangky"
+                                 onclick="handleSignup()">
+                                 <h5 class="fw-bold">ĐĂNG KÝ</h5>
+                              </button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </div>
+   </div>
+   <!-- CONTENT  -->
+   <div class="content">
+
+      <div class="container-fluid ">
+         <div class="container py-5">
+            <div class="row g-4 mb-5">
+               <div class="col-lg-8 col-xl-9">
+                  <div class="row g-4">
+                     <div class="col-lg-6">
+                        <div class="border rounded">
+                           <img src="images/img_product/khoavantay/BOSCH/3.png" id="product-image" alt="Product Image"
+                              class="img-fluid">
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <form method="post"
+                           action="chi-tiet-san-pham/cong-tac-co-thong-minh-wifi-knx-smart-home-3-nut-nhan-nha-trang-hoac-den-chuan-eu.html?buynow">
+                           <h3 class="fw-bold mb-3">Khóa cửa vân tay Bosch ID40 EU Gray App wifi</h3>
+                           <p class="mb-3">Danh mục: <a href="/khoa.html">Khóa vân tay</a></p>
+                           <div class="d-flex mb-2">
+                              <h5 class="fw-bold price me-2">9.000.000 </h5>
+                              <h5 class="text-danger text-decoration-line-through">9.500.000 đ</h5>
+                           </div>
+                           <h6>Mã hàng hóa: KVTANSZ53</h6>
+                           <h6 class="text-success">THÔNG SỐ KỸ THUẬT:</h6>
+                           <p class="text-secondary">Dòng khóa vân tay: Khóa cửa</p>
+                           <p class="text-secondary">Độ phân giải: 3MP (2304×1296)</p>
+                           <p class="text-secondary">Bảo mật: tuyệt đối</p>
+
+                           <div class="input-group quantity mb-5" style="width: 100px;">
+                              
+                              <input type="number" id="quantity" name="quantity"
+                                 class="form-control form-control-sm text-center border-0" value="1" min="1">
+                             
+                           </div>
+
+                           <a id="add-to-cart" data-product-id="100"
+                              class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
+                              <i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ
+                           </a>
+                        </form>
+
+                     </div>
+                     <div class="col-lg-12">
+                        <nav>
+                           <div class="nav nav-tabs mb-3" style="font-size: 30px; font-weight: bold;">
+                              <button class="nav-link active border-white border-bottom-0" type="button" role="tab"
+                                 id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
+                                 aria-controls="nav-about" aria-selected="true" fdprocessedid="adelfl">
+                                 &#10003; Thông tin
+                              </button>
+
+                           </div>
+                        </nav>
+                        <div class="tab-content mb-5">
+                           <div class="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                              <p>Xoay và nghiêng toàn cảnh để bảo vệ 360°, đồng thời Imou A32 hỗ trợ điều khiển từ xa APP.</p>
+
+                              <p>Tầm xa hồng ngoại 10m với công nghệ hồng ngoại thông minh như chống ngược sáng HDR.</p>
+
+                              <p>Hỗ trợ chức năng Soft-AP, kết nối trực tiếp wifi camera không cần thông qua modem nhà mạng.       </p>
+
+                              <p>Điều khiển từ xa qua ứng dụng trên smartphone.</p>
+
+                              <p>Tương thích điều khiển bằng giọng nói với Amazon Alexa &amp; Google Assistant.</p>
+
+                              <p>Với độ phân tới tới 3MP, chuẩn nén H.265 được áp dụng công nghệ hồng ngoại</p>
+
+                              <p>Dễ dàng lắp đặt: Cài đặt và sử dụng một cách đơn giản, phù hợp cho người dùng không chuyên nghiệp.</p>
+
+                              <p>Kích thước: 86*86*35mm.</p>
+
+                              <p>Bảo hành 12 tháng.</p>
+                           </div>
+                           <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+
+                           </div>
+
+
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+               <div class="col-lg-4 col-xl-3">
+                  <div class="row g-4 fruite">
+                     <div class="col-lg-12 mb-2">
+                        <form class="input-group w-100 mx-auto d-flex" action="/tin-tuc" method="get">
+                           <input name="__RequestVerificationToken" type="hidden"
+                              value="WLozc2TCpzMaBno_VtOF2Go1BhF2N5gsJJq8Z1Gk1FQSNKklO46sqxkiv4gXVeFFd_PbgH04mjXFNbQUpz_pVpAZ-JvOHq2I_3tkpBCBALo1">
+                           <input type="search" class="form-control p-3" name="keyword" placeholder="Tìm kiếm"
+                              aria-describedby="search-icon-1">
+                           <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </form>
+                        <div class="mb-4 mt-3">
+                           <h4>Danh mục</h4>
+                           <ul class="list-unstyled fruite-categorie">
+                              <li>
+                                 <div class="d-flex justify-content-between fruite-name">
+                                    <a href="tin-tuc/tin-cong-nghe"><i class="fas fa-bars me-2"></i>Tin công nghệ</a>
+                                    <span>(0)</span>
+                                 </div>
+                              </li>
+
+                           </ul>
+                        </div>
+                     </div>
+
+                     <div class="col-lg-12">
+                        <div class="position-relative">
+                           <img src="/upload/banner-quang-cao.jpg" class="img-fluid w-100 rounded" alt="">
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <h1 class="fw-bold mb-3">Sản phẩm liên quan</h1>
+            <div class="row">
+               <div class="col-lg-4">
+                  <div class="card text-start rounded-4 overflow-hidden" data-id="1">
+                     <img src="images/img_product/khoavantay/DEMAX/1.png" alt="img" class="card-img-top">
+                     <div class="card-body bg-dark">
+                        <h4 class="card-title text-white">Khoá cửa vân tay Demax EL680 SG CNC App wifi</h4>
+                        <p class="card-text d-inline-block text-warning" style="padding-left: 180px;margin-top: -30px; font-size: 30px; font-weight: bold;">6.000.000 đ</p>
+                        <button type="button" class="btn btn-outline-warning float-end add-cart"><i class="fa fas fas fa-cart-plus"></i></button>
+
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="card text-start rounded-4 overflow-hidden" data-id="1">
+                     <img src="images/img_product/khoavantay/DEMAX/2.png" alt="img" class="card-img-top">
+                     <div class="card-body bg-dark">
+                        <h4 class="card-title text-white">Khóa cửa nhận diện khuôn mặt Demax EL999 CNC Crown</h4>
+                        <p class="card-text d-inline-block text-warning" style="padding-left: 170px;margin-top: -30px; font-size: 30px; font-weight: bold;">20.000.000 đ</p>
+                        <button type="button" class="btn btn-outline-warning float-end add-cart"><i class="fa fas fas fa-cart-plus"></i></button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="card text-start rounded-4 overflow-hidden" data-id="1">
+                     <img src="images/img_product/khoavantay/DEMAX/3.png" alt="img" class="card-img-top">
+                     <div class="card-body bg-dark">
+                        <h4 class="card-title text-white">Khoá cửa vân tay Demax SL-C622 CG App wifi</h4>
+                        <p class="card-text d-inline-block text-warning" style="padding-left: 180px;margin-top: -30px; font-size: 30px; font-weight: bold;">5.000.000 đ</p>
+                        <button type="button" class="btn btn-outline-warning float-end add-cart"><i class="fa fas fas fa-cart-plus"></i></button>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <footer>
+      <div class="container">
+         <div class="row contact">
+            <div class="col-md-3">
+               <h4>Hỗ Trợ Khách Hàng</h4>
+               <ul>
+                  <li>
+                     <a href="">Chính Sách Vận Chuyển</a>
+                  </li>
+                  <li><a href="">Chính Sách Thanhh Toán</a>
+                  <li>Chính Sách Đổi Trả Hoàn Tiền</li>
+                  <li>Chính Sách Bảo Hành</li>
+                  <li>Chính Sách Bảo Mật</li>
+                  <li>Chính Sách Xử Lý Khiếu Nại</li>
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <h4>Về Chúng Tôi</h4>
+               <ul>
+                  <li>Giới Thiệu</li>
+                  <li>Dịch Vụ Của AQ</li>
+                  <li>Tuyển Dụng</li>
+                  <li>Sơ Đồ Chỉ Đường</li>
+                  <li>Báo Chí</li>
+                  <li>Chăm Sóc Khách Hàng</li>
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <h4>Hỗ Trợ Bán Hàng</h4>
+               <ul>
+                  <li>Hỗ trợ bảo hành</li>
+                  <li>Tư vấn mua hàng </li>
+                  <li>Dich vụ lắp đặt</li>
+                  <li>Chính Sách Bảo Hành</li>
+                  <li>Phản ánh thái độ phục vụ</li>
+
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <h4>Thông Tin Khác</h4>
+               <ul>
+                  <li>Hướng dẫn mua online</li>
+                  <li>Giao hàng, lắp đặt</li>
+
+               </ul>
+            </div>
+         </div>
+
+         <div class="row address-store">
+            <div class="row1">
+               <h2>CHI NHÁNH</h2>
+            </div>
+            <div class="col-md-4">
+
+               <h4>
+                  <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                  SAFEZONE CHI NHÁNH MIỀN BẮC
+               </h4>
+               <ul>
+                  <li>Địa chỉ: Dương Nội, Hà Đông, Hà Nội</li>
+                  <li>Hotline: 0123123123</li>
+                  <li>Email: safezonemb@gmail.com</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+               <h4>
+                  <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                  SAFEZONE CHI NHÁNH MIỀN TRUNG
+               </h4>
+               <ul>
+                  <li>Địa chỉ: Nguyễn Văn Linh, Hải Châu, Đà Nẵng</li>
+                  <li>Hotline: 0456467456</li>
+                  <li>Email: safezonemt@gmail.com</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+               <h4>
+                  <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                  SAFEZONE CHI NHÁNH MIỀN NAM
+               </h4>
+               <ul>
+                  <li>Địa chỉ: Nguyễn Huệ, Quận 1, TP.Hồ Chí Minh</li>
+                  <li>Hotline: 0789789789</li>
+                  <li>Email: safezonemn@gmail.com</li>
+               </ul>
+            </div>
+
+         </div>
+      </div>
+   </footer>
+</body>
+<div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+   <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Thông báo</strong>
+      <small>Vừa xong</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+   </div>
+   <div class="toast-body" id="toastMessage">
+   </div>
+</div>
+</div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+         <strong class="me-auto">Thông báo</strong>
+         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="toastMessage">
+         <!-- Dynamic product name will be displayed here -->
+      </div>
+   </div>
+</div>
+<script src="https://kit.fontawesome.com/30945203f8.js" crossorigin="anonymous"></script>
+<script src="../Js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/fontawesome.min.js"
+   type="text/javascript"></script>
+<script src="js/validate.js"></script>
+<!-- <script src="js/giohang.js"></script> -->
+<script>
+   document.getElementById('add-to-cart').addEventListener('click', function () {
+      let productName = document.querySelector('h3').textContent.trim();
+      let productPrice = document.querySelector('.price').textContent.trim();
+      let productImage = document.getElementById('product-image').src;
+      let quantity = parseInt(document.getElementById('quantity').value);
+
+      let product = {
+         id: this.getAttribute('data-product-id'),
+         name: productName,
+         price: productPrice,
+         image: productImage,
+         quantity: quantity
+      };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      let existingProductIndex = cart.findIndex(item => item.id === product.id);
+      if (existingProductIndex >= 0) {
+         cart[existingProductIndex].quantity += product.quantity;
+      } else {
+         cart.push(product);
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      const toastMessage = document.getElementById('toastMessage');
+      toastMessage.textContent = `${productName} đã được thêm vào giỏ hàng.`;
+alert(' đã được thêm vào giỏ hàng.')
+      const toastElement = new bootstrap.Toast(document.getElementById('liveToast'));
+      toastElement.show();
+   });
+
+</script>
+
+</html>

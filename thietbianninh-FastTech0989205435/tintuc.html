@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>SAFEZONE</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/trangchu.css">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+      <style>
+         .row h2{
+            display: flex;
+          justify-content: center; /* Căn giữa theo chiều ngang */
+          align-items: center; 
+          color: red;
+          transition: color 0.3s ease, text-decoration 0.3s ease;
+         }
+         .row h2:hover {
+        color:antiquewhite; /* Change to any color you prefer */
+      
+      }
+      .col-md-4 h4{
+         transition: color 0.3s ease, text-decoration 0.3s ease;
+      }
+      .col-md-4 h4:hover{
+         color: aqua;
+      }
+       </style>
+   </head>
+   <body>
+      <header>
+         <section class="header">
+            <div class="top-header">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-md-3">
+                        <div class="logo">
+                           <img src="images/logowb.jpg" />
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="search">
+                           <form class="form-inline justify-content-center row">
+                              <div class="form-search col-10">
+                                 <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                                 <button class="btn btn-search p-o" type="submit">
+                                 <i class="fa fa-search" aria-hidden="true"></i>
+                                 </button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="contact">
+                           <h4>
+                              Hotline hỗ trợ
+                           </h4>
+                           <h5>
+                              0866149244
+                           </h5>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <button type="button" class="btn-cart">
+                           <i class="fa fa-cart-plus mr-2" aria-hidden="true"></i>
+                           <a href="dat_hang.html" class="text-white p-1" > Giỏ Hàng</a>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </header>
+      <div class="background-menu"> </div>
+      <div class="menu-wrapper">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+               <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                  <ul class="navbar-nav">
+                     <li class="nav-item ">
+                        <a class="nav-link " href="trangchu.html">Trang chủ</a>
+                     </li>
+                     <li class="nav-item">
+                        <div class="dropdown">
+                           <a class="nav-link " data-bs-toggle="dropdown" >
+                                 SẢN PHẨM <i class="fa fa-angle-down"></i>
+                           </a>
+                           <ul class="dropdown-menu" >
+                                 <li><a class="dropdown-item " href="./camera.html">CAMERA</a></li>
+                                 <li><a class="dropdown-item" href="./khoa.html">KHÓA VÂN TAY</a></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="nav-item">
+                        <div class="dropdown">
+                           <a class="nav-link active" data-bs-toggle="dropdown" >
+                                 Tin tức <i class="fa fa-angle-down"></i>
+                           </a>
+                           <ul class="dropdown-menu" >
+                                 <li><a class="dropdown-item " href="./tintuc.html">BLOG</a></li>
+                                 <li><a class="dropdown-item" href="./dichvu.html">DỊCH VỤ LẮP RÁP</a></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="khuyenmai.html">
+                        Khuyến mãi
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">
+                        Giới thiệu
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">
+                        Liên hệ
+                        </a>
+                     </li>
+   
+                  </ul>
+                  
+               </div>
+               <button type="button" class="btn btn-outline-warning d-none" id="logout"> Đăng xuất <i class="fa fas fas fa-sign-out-alt" > </i></button>
+               <div class="gr-button login-signup">
+                  <button class="btn btn-login " id="dangnhap" data-bs-toggle="modal" data-bs-target="#sign-in">
+                   Đăng nhập <i class="fa fa-sign-in"> </i>
+                 </button>
+                 <div class="modal fade " id="sign-in" >
+                     <div class="modal-dialog">
+                        .<div class="modal-content bg-dark   ">
+                           <div class="modal-header">
+                              <h2 class="modal-title text-center w-100 fw-bold text-warning " >
+                                 Đăng Nhập
+                              </h2>
+                           </div>
+                           <form id="login">
+                              <div class="modal-body p-5 ">
+                                 <div class="input-group mb-4 ">
+                                    <div class="input-group-text "><i class="fa fas fa-user text-warning"></i></div>
+                                    <input type="text" class="form-control p-2 " id="nameLogin" placeholder="User name">
+                                 </div>
+                                 <div class="input-group mb-3 ">
+                                    <div class="input-group-text  "><i class="fa fas fa-lock text-warning"></i></div>
+                                    <input type="password" class="form-control p-2" id="passwordLogin" placeholder="Password">
+                                 </div>
+                                 <p class="text-danger " id="error-signin"></p>
+                                 <div class="form-check mb-5 ">
+                                    <input class="form-check-input text-bg-dark " type="checkbox" value="" id="" />
+                                    <label class="form-check-label text-white " for=""> Remember password </label>
+                                 </div>
+   
+                                 <button type="submit" class="btn btn-outline-warning w-100 " ><h5 class="fw-bold ">SIGN IN</h5></button>
+                              </div>
+                           </form>
+   
+                           <p class="text-white text-center ">bạn chưa có tài khoản  <span class="link-warning">đăng ký</span></p>
+                        </div>
+                     </div>
+                 </div>
+                 
+                  <button class="btn btn-login" id="dangky" data-bs-toggle="modal" data-bs-target="#sign-up" >
+                      Đăng ký <i class="fa fa-user" > </i>
+                  </button>
+                  <div class="modal fade" id="sign-up" >
+                     <div class="modal-dialog">
+                        .<div class="modal-content bg-dark   ">
+                           <div class="modal-header">
+                              <h2 class="modal-title text-center w-100 fw-bold text-warning  ">
+                                 Đăng Ký
+                              </h2>
+                           </div>
+                           <div class="modal-body p-5  ">
+                              <form id="form-dangki">
+                                 <div class="input-group mb-4 ">
+                                    <div class="input-group-text "><i class="fa fas fa-user text-warning"></i></div>
+                                    <input type="text" class="form-control p-2" id="name" placeholder="User name" >
+                                 </div>
+                                 <div class="input-group mb-4 ">
+                                    <div class="input-group-text  "><i class="fa fas fa-envelope text-warning"></i></div>
+                                    <input type="email" class="form-control p-2" id="email" placeholder="Eamil" >
+                                 </div>
+                                 <div class="input-group mb-4 ">
+                                    <div class="input-group-text  "><i class="fa fas fa-phone text-warning"></i></div>
+                                    <input type="text" class="form-control p-2" id="phone" placeholder="Phone" >
+                                 </div>
+                                 <div class="input-group mb-4 ">
+                                    <div class="input-group-text  "><i class="fa fas fa-lock text-warning"></i></div>
+                                    <input type="password" class="form-control p-2" id="password" placeholder="Password" >
+                                 </div>
+   
+                                 <div class="form-check mb-5 ">
+                                    <input class="form-check-input text-bg-dark " type="checkbox" value="" id="check-signup" />
+                                    <label class="form-check-label text-white " for="check-signup"> Đồng ý với <a class="link-warning " style="font-size: 18px;" href="http://">điều khoản & chính sách</a> của chúng tôi </label>
+                                    <p class="text-danger" id="error"></p>
+                                 </div>
+   
+                                 <button type="submit" class="btn btn-outline-warning  w-100 " id="btn-dangky"><h5 class="fw-bold ">SIGN UP</h5></button>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                 </div>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- tin tuc -->
+     
+
+
+      <section class="news">
+        <h3 class="title-page">
+        TIN TỨC
+      </h3>
+      <div class="container mb-5">
+         <h1>SafeZone: Nơi An Ninh Trở Thành Đỉnh Cao Công Nghệ</h1>
+         <div class="h5" style="font-style: italic;">
+            <h5>SafeZone ra mắt dòng sản phẩm thiết bị an ninh mới, nâng cao sự bảo vệ cho gia đình và doanh nghiệp</h5>
+         </div>
+         <p>Ngày 21 tháng 10 năm 2024, SafeZone tự hào công bố ra mắt một loạt thiết bị an ninh mới
+             nhằm đáp ứng nhu cầu ngày càng tăng về an toàn và bảo mật cho cả gia đình và doanh nghiệp.
+              Với sứ mệnh cung cấp giải pháp an ninh toàn diện, chúng tôi cam kết mang đến cho khách hàng
+               những sản phẩm chất lượng cao, tiên tiến và đáng tin cậy. 
+         </p>
+         <div class="p" style="font-weight: bold; font-style: italic;">
+            <p>Các sản phẩm nổi bật</p>
+         </div>
+         <div class="p-cam" style="font-weight: bold;">
+            <p>1. Camera giám sát HD thông minh: </p>
+         </div>
+         <p>Các camera giám sát mới nhất của SafeZone được trang bị công nghệ HD
+             cho hình ảnh sắc nét, với khả năng quay 360 độ và tích hợp cảm biến chuyển động. Khách hàng có thể
+              theo dõi mọi hoạt động từ xa qua ứng dụng di động, giúp họ luôn an tâm về an ninh trong nhà và nơi làm việc.</p>
+         <div class="d-flex justify-content-center ">
+            <img src="images/Screenshot 2024-10-21 010854.png" class="img-fluid " alt="img">
+         </div>
+         <i class="text-center d-block mb-4">Hình ảnh tổng quan của Camera giám sát HD thông minh</i>
+         <div class="p-khoa" style="font-weight:bold ;">
+            <p>2. Khóa điện tử cảm biến vân tay:</p>
+         </div>
+         <p> SafeZone giới thiệu các mẫu khóa cửa điện tử với thiết kế hiện đại, dễ dàng lắp đặt và sử dụng.
+             Các khóa này cho phép người dùng mở khóa qua mã PIN, thẻ từ, vân tay hoặc ứng dụng di động, đảm bảo an toàn và tiện lợi cho người sử dụng.
+         </p>
+         <div class="d-flex justify-content-center ">
+            <img src="images/Screenshot 2024-10-21 010555.png" class="img-fluid " alt="img">
+         </div>
+         <i class="text-center d-block mb-4">Hình ảnh tổng quan của khóa điện tử cảm biến vân tay </i>
+         <p>Đảm bảo an toàn cho mọi không gian: Tất cả sản phẩm của SafeZone được thiết kế để hoạt động hiệu quả trong nhiều điều kiện môi trường khác nhau,
+             từ nhà ở cho đến văn phòng và khu vực thương mại. Chúng tôi cam kết cung cấp giải pháp an ninh linh hoạt, giúp khách hàng dễ dàng lựa chọn 
+             và lắp đặt thiết bị phù hợp với nhu cầu riêng. </p>
+         
+       <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="title-news">
+             CHUYÊN ĐỀ CAMERA AN NINH
+            </h3>
+            <article>
+              <div class="row item-news">
+                <div class="col-md-5 pr-0">
+                  <div class="thumnail-news h-100">
+                      <a href="">
+                        <img src="images/CĐcam1.png">
+                      </a>
+                  </div>
+                </div>
+                <div class="col-md-7 right">
+                  <h5>
+                   <a href="">
+                     Giá camera An Ninh - Các yếu tố sẽ Ảnh hưởng - Phân tích chi tiết
+                   </a>
+                  </h5>
+                  <p class="mb-0">
+                    Kiểu trang trí phòng ngủ nào sẽ phù hợp cho các cặp vợ chồng son, đẹp mắt và thoải mái?
+                  </p>
+                </div>
+              </div>
+              <div class="row item-news">
+                <div class="col-md-5 pr-0">
+                  <div class="thumnail-news h-100">
+                     <a href="">
+                        <img src="images/camera-giam-sat.jpg">
+                      </a>
+                  </div>
+                </div>
+                <div class="col-md-7 right">
+                  <h5>
+                   <a href="">                    
+                     Tại Sao Camera An Ninh Là Yếu Tố Quan Trọng Trong Bảo Vệ Gia Đình và Tài Sản?
+                   </a>
+                  </h5>
+                  <p class="mb-0">
+                   Gia Phong cung cấp tới quý khách những mẫu tủ giầy đẹp với ✅
+                  </p>
+                </div>
+              </div>
+              <div class="row item-news">
+                <div class="col-md-5 pr-0">
+                  <div class="thumnail-news h-100">
+                     <a href="">
+                        <img src="images/CĐcam3.png">
+                      </a>
+                  </div>
+                </div>
+                <div class="col-md-7 right">
+                  <h5>
+                   <a href="">
+                     Camera An Ninh: Giải Pháp Bảo Vệ Hiện Đại Cho Ngôi Nhà Của Bạn
+                   </a>
+                  </h5>
+                  <p class="mb-0">
+                    Các mẫu giường gỗ hiện đại, cổ điển tại Nội Thất Gia Phong ✅100% gỗ tự nhiên 
+                  </p>
+                </div>
+              </div>
+              
+            </article>
+            <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">
+                    2
+                    <span class="sr-only">(current)</span>
+                  </span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-6">
+            <h3 class="title-news">
+             CHUYÊN ĐỀ NỘI THẤT
+            </h3>
+            <article>
+              <div class="row item-news">
+                <div class="col-md-5 pr-0">
+                  <div class="thumnail-news h-100">
+                     <a href="">
+                        <img src="images/CĐvantay1.jpg">
+                      </a>
+                  </div>
+                </div>
+                <div class="col-md-7 right">
+                  <h5>
+                   <a href="">
+                     Khóa cửa điện tử có tính năng gì nổi bật?
+                   </a>
+                  </h5>
+                  <p class="mb-0">
+                    Làm thế nào để trang trí nhà đẹp với gam màu vàng ấm áp? Vàng là màu sắc mang lại may mắn
+                  </p>
+                </div>
+              </div>
+              <div class="row item-news">
+                <div class="col-md-5 pr-0">
+                  <div class="thumnail-news h-100">
+                     <a href="">
+                        <img src="images/CĐvantay2.jpg">
+                      </a>
+                  </div>
+                </div>
+                <div class="col-md-7 right">
+                  <h5>
+                   <a href="">
+                     Những lưu ý khí sử dụng khóa cửa điều khiển từ xa
+                   </a>
+                  </h5>
+                  <p class="mb-0">
+                    Chúng ta đã chính thức tạm biệt năm 2018 và chào đón 2020. Hãy cùng cập nhật những xu hướng
+                  </p>
+                </div>
+              </div>
+              <div class="row item-news">
+                <div class="col-md-5 pr-0">
+                  <div class="thumnail-news h-100">
+                     <a href="">
+                        <img src="images/CĐvantay3.jpg">
+                      </a>
+                  </div>
+                </div>
+                <div class="col-md-7 right">
+                  <h5>
+                   <a href="">
+                     CHƯƠNG TRÌNH KHUYẾN MÃI
+                   </a>
+                  </h5>
+                  <p class="mb-0">
+                    Màu sắc có vai trò rất lớn trong không gian. Khi vận dụng đúng và hợp lý thì dù chỉ xuất hiện trong một không gian nhỏ, nhưng màu sắc sẽ đem lại cảm xúc lớn.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">
+                    2
+                    <span class="sr-only">(current)</span>
+                  </span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div> 
+       </div>
+     </section>
+
+     <!-- ketthuc -->
+     <footer>
+      <div class="container">
+         <div class="row contact">
+            <div class="col-md-3">
+               <h4>Hỗ Trợ Khách Hàng</h4>
+               <ul>
+                  <li>
+                     <a href="">Chính Sách Vận Chuyển</a>
+                  </li>
+                  <li><a href="">Chính Sách Thanhh Toán</a>
+                  <li>Chính Sách Đổi Trả Hoàn Tiền</li>
+                  <li>Chính Sách Bảo Hành</li>
+                  <li>Chính Sách Bảo Mật</li>
+                  <li>Chính Sách Xử Lý Khiếu Nại</li>
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <h4>Về Chúng Tôi</h4>
+               <ul>
+                  <li>Giới Thiệu</li>
+                  <li>Dịch Vụ Của AQ</li>
+                  <li>Tuyển Dụng</li>
+                  <li>Sơ Đồ Chỉ Đường</li>
+                  <li>Báo Chí</li>
+                  <li>Chăm Sóc Khách Hàng</li>
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <h4>Hỗ Trợ Bán Hàng</h4>
+               <ul>
+                  <li>Hỗ trợ bảo hành</li>
+                  <li>Tư vấn mua hàng </li>
+                  <li>Dich vụ bọc lại sofa</li>
+                  <li>Chính Sách Bảo Hành</li>
+                  <li>Phản ánh thái độ phục vụ</li>
+
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <h4>Thông Tin Khác</h4>
+               <ul>
+                  <li>Hướng dẫn mua online</li>
+                  <li>Giao hàng, lắp đặt</li>
+
+               </ul>
+            </div>
+         </div>
+        
+         <div class="row address-store">
+            <div class="row">
+               <h2>CHI NHÁNH</h2>
+            </div>
+            <div class="col-md-4">
+
+               <h4> 
+                  <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                  SAFEZONE CHI NHÁNH MIỀN BẮC
+               </h4>
+               <ul>
+                  <li>Địa chỉ: Dương Nội, Hà Đông, Hà Nội</li>
+                  <li>Hotline: 0123123123</li>
+                  <li>Email: safezonemb@gmail.com</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+               <h4> 
+                  <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                  SAFEZONE CHI NHÁNH MIỀN TRUNG
+               </h4>
+               <ul>
+                  <li>Địa chỉ: Nguyễn Văn Linh, Hải Châu, Đà Nẵng</li>
+                  <li>Hotline: 0456467456</li>
+                  <li>Email: safezonemt@gmail.com</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+               <h4> 
+                  <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                  SAFEZONE CHI NHÁNH MIỀN NAM
+               </h4>
+               <ul>
+                  <li>Địa chỉ: Nguyễn Huệ, Quận 1, TP.Hồ Chí Minh</li>
+                  <li>Hotline: 0789789789</li>
+                  <li>Email: safezonemn@gmail.com</li>
+               </ul>
+            </div>
+
+         </div>
+      </div>
+   </footer>
+  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="Bootstrap/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/fontawesome.min.js" type="text/javascript"></script>
+    <script src="js/validate.js"></script>
+</html>

@@ -1,0 +1,64 @@
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+    background: #1a1a1a;
+}
+
+.modal-header {
+    background: linear-gradient(45deg, #ff8000, #ffcc00);
+    padding: 1.5rem;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.input-group-text {
+    background: #ffcc00;
+    color: #1a1a1a;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+    padding: 0.75rem;
+    background: #333;
+    color: #fff;
+}
+
+.form-check-label a {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.btn-custom {
+    background: #ff8000;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-custom:hover {
+    background: #e67300;
+}
+
+.error-message {
+    color: #ff6666;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}

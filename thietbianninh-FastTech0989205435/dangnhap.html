@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dangnhap.css">
+    <link rel="stylesheet" href="trangchu.html">
+    <title>Đăng Ký/Đăng Nhập</title>   
+</head>
+<body>
+
+<div class="container">
+    <!-- Form bao bọc -->
+    <div class="form-container" id="formContainer">
+        <!-- Form đăng nhập -->
+        <div class="form-box" id="loginForm">
+            <h2>Đăng Nhập</h2>
+            <form onsubmit="login(event)">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Mật khẩu" required>
+                <button type="submit">Đăng Nhập</button>
+            </form>
+            <a onclick="showRegister()">Chưa có tài khoản? Đăng ký</a>
+        </div>
+
+        <!-- Form đăng ký -->
+        <div class="form-box" id="registerForm">
+            <h2>Đăng Ký</h2>
+            <form onsubmit="register(event)">
+                <input type="text" placeholder="Họ và tên" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Mật khẩu" required>
+                <input type="password" placeholder="Nhập lại mật khẩu" required>
+                <button type="submit">Đăng Ký</button>
+            </form>
+            <div class="form-footer">
+                <p>Đã có tài khoản? <a href="#" onclick="showLogin()">Đăng nhập ngay</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showRegister() {
+        document.getElementById("formContainer").classList.add("move-right");
+        document.getElementById("formContainer").classList.remove("move-left");
+    }
+
+    function showLogin() {
+        document.getElementById("formContainer").classList.add("move-left");
+        document.getElementById("formContainer").classList.remove("move-right");
+    }
+
+    function login(event) {
+        event.preventDefault();
+        // Logic kiểm tra đăng nhập (giả lập)
+        // Redirect to the main website after successful login
+        alert("Đăng nhập thành công!");
+        window.location.href = "trangchu.html"; // Replace with your main website URL
+    }
+
+    function register(event) {
+        event.preventDefault();
+        // Logic đăng ký (giả lập)
+        alert("Đăng ký thành công! Vui lòng đăng nhập.");
+        showLogin();
+    }
+</script>
+
+</body>
+</html>

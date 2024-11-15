@@ -1,0 +1,26 @@
+#content {
+  min-height: 700px;
+}
+table tbody tr td img {
+  height: auto;
+  width: 100px;
+  border-radius: 15px;
+  object-fit: cover;
+  overflow: auto;
+  border: 2px solid;
+}
+td {
+  width: 500px;
+}
+input[type="checkbox"] {
+  width: 25px;
+  /* Độ rộng */
+  height: 25px;
+  /* Chiều cao */
+  cursor: pointer;
+  /* Thay đổi con trỏ khi hover */
+}
+
+input[type="checkbox"]:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

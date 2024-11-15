@@ -1,0 +1,60 @@
+.banner-sofa{
+    background-image: url(../images/bannertrangchu.png);
+    background-repeat: no-repeat;
+    background-clip: cover;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-size: cover;
+}
+.banner-sofa h1{
+    color: black;
+    font-size: 70px;
+    padding-bottom: 550px;
+    font-weight: 100px;
+    text-shadow: 3px 3px 9px black;
+}
+.banner-2{
+    background-image: url(../images/banner2.webp);
+    background-repeat: no-repeat;
+    background-clip: cover;
+    height: 95vh;
+    margin-top: 30px;
+    padding: 100px;
+    background-size: cover;
+    color: black;
+
+}
+.banner-2 .content{
+    width: 45%;
+    text-align: center;
+
+}
+.banner-3{
+    height: 700px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+
+}
+.banner-3 img{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    object-fit: cover;
+}
+.banner-3 img:first-child {
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+}
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+

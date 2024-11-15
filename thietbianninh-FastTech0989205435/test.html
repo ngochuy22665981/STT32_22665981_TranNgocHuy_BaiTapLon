@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-details {
+            margin-top: 20px;
+        }
+        .price {
+            color: #f39c12;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #f39c12;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="washing-machine.jpg" alt="Washing Machine" class="product-image">
+            </div>
+            <div class="col-md-6">
+                <div class="product-details">
+                    <h2>Máy Giặt Sấy LG Sang Trọng</h2>
+                    <p>Thương Hiệu: LG</p>
+                    <p class="price">10.990.000đ</p>
+                    <div class="form-group">
+                        <label for="weight">Khối Lượng:</label>
+                        <select class="form-control" id="weight">
+                            <option>8kg</option>
+                            <option>9kg</option>
+                            <option>10kg</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Số Lượng:</label>
+                        <input type="number" class="form-control" id="quantity" value="1">
+                    </div>
+                    <button class="btn btn-custom">Thêm giỏ hàng</button>
+                    <button class="btn btn-light">Yêu thích</button>
+                    <p><a href="#">Xem chi tiết sản phẩm</a></p>
+                    <p>Giao hàng và trả lại miễn phí</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
